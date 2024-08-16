@@ -4,7 +4,6 @@ import { nanoid } from 'nanoid';
 import NotesList from './components/NotesList';
 import Search from './components/Search';
 import Header from './components/Header';
-import SignUp from './components/SignUp';
 import Register from './components/Register';
 import Login from './components/Login';
 
@@ -72,7 +71,6 @@ const App = () => {
             <Route path="/" element={<Navigate to={isLoggedIn ? "/notes" : "/login"} />} />
             <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} setCurrentUser={setCurrentUser} />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/signup" element={<SignUp />} />
             <Route path="/notes" element={
               isLoggedIn ? (
                 <>
